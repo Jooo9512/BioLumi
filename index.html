@@ -36,14 +36,15 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
         .logo {
-            max-width: 150px; 
+            max-width: 200px; /* Augmenté pour le logo complet */
             margin: 0 auto 10px; 
             display: block;
-            /* Placeholder pour le logo personnalisé de BioLumi */
-            font-size: 2em;
-            color: var(--color-primary);
-            text-shadow: 0 0 10px var(--color-accent-shadow);
-            font-weight: bold;
+            filter: drop-shadow(0 0 8px var(--color-accent-shadow)); /* Effet de lueur */
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Ajout d'un léger arrondi au logo */
         }
 
         h1 {
@@ -155,8 +156,6 @@
             margin-right: 10px;
         }
 
-        /* Suppression de la section Chiffrage/Budget */
-
         /* --- 5. Footer --- */
         footer {
             background: var(--color-secondary); 
@@ -165,15 +164,27 @@
             padding: 30px;
             margin-top: 50px;
         }
-        .logo-footer {max-width: 100px; margin: 15px auto; display:block;}
+        .logo-footer {
+            max-width: 80px; 
+            margin: 15px auto 5px; 
+            display: block;
+            filter: drop-shadow(0 0 6px var(--color-accent-shadow)); /* Effet de lueur */
+            border-radius: 50%;
+            border: 2px solid var(--color-primary);
+        }
+        .logo-footer img {
+             max-width: 100%;
+             height: auto;
+             border-radius: 50%;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-             <!-- Placeholder pour le Logo BioLumi (utiliser une icône temporaire) -->
-            <i class="fas fa-satellite-dish fa-3x"></i>
+             <!-- LOGO BioLumi pour l'en-tête (Image en dur) -->
+            <img src="https://placehold.co/200x200/0f172a/00ffff?text=BIO+LUMI" alt="Logo BioLumi">
         </div>
         <h1>Bio<span>Lumi</span> : La Bio-Balise Autonome</h1>
         <p>Projet BioLumi : Signalisation routière 100% biosourcée et sans électricité</p>
@@ -245,7 +256,7 @@
 
     <footer>
         <div class="logo-footer">
-            <i class="fas fa-satellite-dish fa-2x"></i>
+            <img src="https://placehold.co/80x80/0f172a/00ffff?text=B+L" alt="Logo BioLumi" onerror="this.src='https://placehold.co/80x80/0f172a/00ffff?text=B+L';">
         </div>
         <p>© 2025 BioLumi - Projet BioLumy by Ballon D'Or | Hackathon Bioéconomie & Service Public</p>
     </footer>
